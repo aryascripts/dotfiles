@@ -1,0 +1,45 @@
+export PATH="$HOME/bin:$PATH"
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+# Append to the bash history file (without overwriting it)
+shopt -s histappend
+
+# Autocorrect in typos in path names for `cd`
+shopt -s cdspell
+
+#   Set Paths
+#   ------------------------------------------------------------
+ export PATH="$PATH:/usr/local/bin/"
+  export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+
+#   Set aliases
+#   ------------------------------------------------------------
+ 
+# System commands
+alias subl='/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
+alias ls='ls -GFhl'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+alias ll='ls -FGlAhp'
+
+# Going back and working with cd
+alias cd..='cd ../'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+
+# Other commands
+alias f='open -a Finder ./'
+alias ~='cd ~'
+alias c='clear'
+alias path='echo -e ${PATH//:/\\n}'
+
+# Functions
+cd() { builtin cd "$@"; ll; }
+mcd() { mkdir -p "$1" && cd "$1" }
+trash () { command mv "$@" ~/.Trash ; }
