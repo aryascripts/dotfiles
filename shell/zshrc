@@ -70,3 +70,37 @@ POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 ##
+
+# System commands
+alias subl='/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
+alias ls='ls -GFhl'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+alias ll='ls -FGlAhp'
+
+# Going back and working with cd
+alias cd..='cd ../'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+
+# directories most often used
+alias refsq='cd ~/Google\ Drive/College\ Files/02\ MS-SWE/04\ Spring\ 2017/GRA/Dropbox/AmanGRA/REFSQ2018/'
+alias drive='cd ~/Google\ Drive/'
+alias college='cd ~/Google\ Drive/College\ Files/'
+alias masters='cd ~/Google\ Drive/College\ Files/02\ MS-SWE/'
+alias GRA='cd ~/Google\ Drive/College\ Files/02\ MS-SWE/04\ Spring\ 2017/GRA/Dropbox/AmanGRA/'
+
+# Other commands
+alias f='open -a Finder ./'
+alias ~='cd ~'
+alias c='clear'
+alias path='echo -e ${PATH//:/\\n}'
+
+# Functions
+cd() { builtin cd "$@"; ll; }
+mkdircd() { mkdir -p "$1" && cd "$1"; }
+latex() { command pdflatex "$1" && open "$1".pdf; }
