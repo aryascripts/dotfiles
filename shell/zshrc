@@ -7,7 +7,7 @@ export ZSH=/Users/amanbhimani/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="bira"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -56,19 +56,19 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 ## POWERLEVEL9K SETTINGS ##
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=true
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%K{white}%F{black} \UE12E `date +%T` %f%k%F{white}%f "
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_internet_signal os_icon  dir vcs)
-POWERLEVEL9K_OS_ICON_BACKGROUND="white"
-POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
-POWERLEVEL9K_DIR_HOME_FOREGROUND="white"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+# POWERLEVEL9K_STATUS_VERBOSE=false
+# POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=true
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
+#POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%K{white}%F{black} \UE12E `date +%T` %f%k%F{white}%f "
+#POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_internet_signal os_icon  dir vcs)
+#POWERLEVEL9K_OS_ICON_BACKGROUND="white"
+#POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
+#POWERLEVEL9K_DIR_HOME_FOREGROUND="white"
+#POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
+#POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
+#POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 ##
 
 # System commands
@@ -82,13 +82,13 @@ alias ll='ls -FGlAhp'
 # Going back and working with cd
 alias cd..='cd ../'
 alias ..='cd ../'
-alias ...='cd ../../'
+alias .2='cd ../../'
 alias .3='cd ../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 
 # directories most often used
-alias refsq='cd ~/Google\ Drive/College\ Files/02\ MS-SWE/04\ Spring\ 2017/GRA/Dropbox/AmanGRA/REFSQ2018/'
+alias refsq='cd ~/Google\ Drive/College\ Files/02\ MS-SWE/04\ Spring\ 2017/GRA/Dropbox/AmanGRA/REFSQ2018-Alessio\ 28\ Sept\ 17'
 alias drive='cd ~/Google\ Drive/'
 alias college='cd ~/Google\ Drive/College\ Files/'
 alias masters='cd ~/Google\ Drive/College\ Files/02\ MS-SWE/'
@@ -100,7 +100,44 @@ alias ~='cd ~'
 alias c='clear'
 alias path='echo -e ${PATH//:/\\n}'
 
+alias sqlmamp ' /Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot'
+
 # Functions
 cd() { builtin cd "$@"; ll; }
 mkdircd() { mkdir -p "$1" && cd "$1"; }
 latex() { command pdflatex "$1" && open "$1".pdf; }
+
+export PATH=${PATH}:/usr/local/mysql/bin
+
+
+## IPN EXPORTS
+export LINKEDIN_KEY='7857efe6sbj9kd'
+export LINKEDIN_SECRET='Wer3FkGmuVk64WMQ'
+
+export STATE='A6AEDF5F-B453-4D73-9A94-B3E6C1D891F4'
+export SERVER_SECRET='FEE21AB8-4C8B-4A42-B39C-2861B7E718BC'
+
+###### mandrill Test key no email sent #######
+# export MANDRILL_KEY='n1WIFK23hCwrc-lqN7A0lw'
+
+###### mandrill live test key ############
+export MANDRILL_KEY='Z7Pq0lLI5H16vV0H-yJZ7g'
+export YASABE_USER='ipnonline'
+export YASABE_PASS='waxave15'
+export BASE_URL='http://127.0.0.1:3000'
+
+export CONTENT_USER='ipndev'
+export CONTENT_PASS='password'
+export CONTENT_URL='http://localhost:8888/ipn_dev/wp-json/wp/v2/'
+
+# DEV KIT PRO, 3DS and SWITCH
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+
+
+#export CONTENT_USER='ipndev'
+#export CONTENT_PASS='ipndev789'
+#export CONTENT_URL='http://ipndev2.southcentralus.cloudapp.azure.com/html/wp-json/wp/v2/'
+
+export IUSA_USER='admin@ipnonline.net'
+export IUSA_PASS='1USA1pn!'

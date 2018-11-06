@@ -8,10 +8,6 @@ sudo -v
 
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null/ &
 
-# Hide Safari's Bookmarks bar
-defaults write com.apple.Safari ShowFavoritesBar -bool false
-
-
 ###############################################################################
 # Apple software: Safari, Updater, iTunes, etc.                               #
 ###############################################################################
@@ -166,11 +162,11 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Allow text-selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
-# Disable the warning before emptying the Trash
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
+# Enable the warning before emptying the Trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool true
 
-# Enable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool true
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
