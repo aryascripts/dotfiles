@@ -109,11 +109,6 @@ latex() { command pdflatex "$1" && open "$1".pdf; }
 
 export PATH=${PATH}:/usr/local/mysql/bin
 
-
-## IPN EXPORTS
-export LINKEDIN_KEY='7857efe6sbj9kd'
-export LINKEDIN_SECRET='Wer3FkGmuVk64WMQ'
-
 export STATE='A6AEDF5F-B453-4D73-9A94-B3E6C1D891F4'
 export SERVER_SECRET='FEE21AB8-4C8B-4A42-B39C-2861B7E718BC'
 
