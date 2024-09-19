@@ -100,8 +100,6 @@ alias ~='cd ~'
 alias c='clear'
 alias path='echo -e ${PATH//:/\\n}'
 
-alias sqlmamp ' /Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot'
-
 # Functions
 cd() { builtin cd "$@"; ll; }
 mkdircd() { mkdir -p "$1" && cd "$1"; }
@@ -109,30 +107,12 @@ latex() { command pdflatex "$1" && open "$1".pdf; }
 
 export PATH=${PATH}:/usr/local/mysql/bin
 
-export STATE='A6AEDF5F-B453-4D73-9A94-B3E6C1D891F4'
-export SERVER_SECRET='FEE21AB8-4C8B-4A42-B39C-2861B7E718BC'
-
-###### mandrill Test key no email sent #######
-# export MANDRILL_KEY='n1WIFK23hCwrc-lqN7A0lw'
-
 ###### mandrill live test key ############
 export MANDRILL_KEY='Z7Pq0lLI5H16vV0H-yJZ7g'
 export YASABE_USER='ipnonline'
 export YASABE_PASS='waxave15'
 export BASE_URL='http://127.0.0.1:3000'
 
-export CONTENT_USER='ipndev'
-export CONTENT_PASS='password'
-export CONTENT_URL='http://localhost:8888/ipn_dev/wp-json/wp/v2/'
-
 # DEV KIT PRO, 3DS and SWITCH
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
-
-
-#export CONTENT_USER='ipndev'
-#export CONTENT_PASS='ipndev789'
-#export CONTENT_URL='http://ipndev2.southcentralus.cloudapp.azure.com/html/wp-json/wp/v2/'
-
-export IUSA_USER='admin@ipnonline.net'
-export IUSA_PASS='1USA1pn!'
