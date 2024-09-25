@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMPUTERNAME="Aman's MBP"
+COMPUTERNAME="Arya's MBP"
 HOSTNAME="mbp"
 LOCALHOSTNAME="mbp"
 
